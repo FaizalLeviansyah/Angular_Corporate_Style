@@ -1,0 +1,514 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumbs title="My Wallet" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+<!-- End Breadcrumbs -->
+
+<div class="row">
+    <div class="col-xxl-9">
+        <div class="card">
+            <div class="card-header">
+                <div class="d-flex align-items-center">
+                    <div class="flex-grow-1">
+                        <h5 class="card-title mb-0">My Portfolio Statistics</h5>
+                    </div>
+                    <div class="toolbar d-flex align-items-start justify-content-center flex-wrap gap-2">
+                        <button type="button" class="btn btn-soft-success timeline-btn btn-sm" id="one_month">
+                            1M
+                        </button>
+                        <button type="button" class="btn btn-soft-success timeline-btn btn-sm" id="six_months">
+                            6M
+                        </button>
+                        <button type="button" class="btn btn-soft-success timeline-btn btn-sm" id="one_year">
+                            1Y
+                        </button>
+                        <button type="button" class="btn btn-soft-secondary timeline-btn btn-sm active" id="all">
+                            ALL
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="mb-n2">
+                    <apx-chart [series]="marketGraphChart.series" [chart]="marketGraphChart.chart"
+                        [yaxis]="marketGraphChart.yaxis" [dataLabels]="marketGraphChart.dataLabels"
+                        [markers]="marketGraphChart.markers" [xaxis]="marketGraphChart.xaxis"
+                        [tooltip]="marketGraphChart.tooltip" [fill]="marketGraphChart.fill"
+                        [colors]="marketGraphChart.colors" dir="ltr"></apx-chart>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center mb-3">
+            <div class="flex-grow-1">
+                <h5 class="mb-0">Watchlist</h5>
+            </div>
+            <div class="flexshrink-0">
+                <button class="btn btn-primary btn-sm"><i class="ri-star-line align-bottom"></i> Add Watchlist</button>
+            </div>
+        </div>
+
+        <div class="swiper cryptoSlider">
+
+            <swiper [config]="config">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <div class="dropdown" ngbDropdown>
+                                        <a class="text-reset arrow-none" href="javascript:void(0);"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            ngbDropdownToggle>
+                                            <span class="text-muted fs-18"><i
+                                                    class="mdi mdi-dots-horizontal"></i></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                            <a class="dropdown-item" href="javascript:void(0);">View Details</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Remove Watchlist</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/images/svg/crypto-icons/btc.svg"
+                                        class="bg-light rounded-circle p-1 avatar-xs img-fluid" alt="">
+                                    <h6 class="ms-2 mb-0 fs-14">Bitcoin</h6>
+                                </div>
+                                <div class="row align-items-end g-0">
+                                    <div class="col-6">
+                                        <h5 class="mb-1 mt-4">$46,335.40</h5>
+                                        <p class="text-success fs-13 fw-medium mb-0">+0.63%<span
+                                                class="text-muted ms-2 fs-10">(BTC)</span></p>
+                                    </div><!-- end col -->
+                                    <div class="col-6">
+                                        <apx-chart [series]="BitcoinChart.series" [chart]="BitcoinChart.chart"
+                                            [dataLabels]="BitcoinChart.dataLabels" [stroke]="BitcoinChart.stroke"
+                                            [fill]="BitcoinChart.fill" [colors]="BitcoinChart.colors"
+                                            dir="ltr"></apx-chart>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <div class="dropdown" ngbDropdown>
+                                        <a class="text-reset arrow-none" href="javascript:void(0);"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            ngbDropdownToggle>
+                                            <span class="text-muted fs-18"><i
+                                                    class="mdi mdi-dots-horizontal"></i></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                            <a class="dropdown-item" href="javascript:void(0);">View Details</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Remove Watchlist</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/images/svg/crypto-icons/ltc.svg"
+                                        class="bg-light rounded-circle p-1 avatar-xs img-fluid" alt="">
+                                    <h6 class="ms-2 mb-0 fs-14">Litecoin</h6>
+                                </div>
+                                <div class="row align-items-end g-0">
+                                    <div class="col-6">
+                                        <h5 class="mb-1 mt-4">$65.64</h5>
+                                        <p class="text-danger fs-13 fw-medium mb-0">-3.42%<span
+                                                class="text-muted ms-2 fs-10">(LTC)</span></p>
+                                    </div><!-- end col -->
+                                    <div class="col-6">
+                                        <apx-chart [series]="litecoinChart.series" [chart]="litecoinChart.chart"
+                                            [dataLabels]="litecoinChart.dataLabels" [stroke]="litecoinChart.stroke"
+                                            [fill]="litecoinChart.fill" [colors]="litecoinChart.colors"
+                                            dir="ltr"></apx-chart>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <div class="dropdown" ngbDropdown>
+                                        <a class="text-reset arrow-none" href="javascript:void(0);"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            ngbDropdownToggle>
+                                            <span class="text-muted fs-18"><i
+                                                    class="mdi mdi-dots-horizontal"></i></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                            <a class="dropdown-item" href="javascript:void(0);">View Details</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Remove Watchlist</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/images/svg/crypto-icons/etc.svg"
+                                        class="bg-light rounded-circle p-1 avatar-xs img-fluid" alt="">
+                                    <h6 class="ms-2 mb-0 fs-14">Eathereum</h6>
+                                </div>
+                                <div class="row align-items-end g-0">
+                                    <div class="col-6">
+                                        <h5 class="mb-1 mt-4">$3,748.66</h5>
+                                        <p class="text-danger fs-13 fw-medium mb-0">+0.42%<span
+                                                class="text-muted ms-2 fs-10">(ETH)</span></p>
+                                    </div><!-- end col -->
+                                    <div class="col-6">
+                                        <apx-chart [series]="EatherreumChart.series" [chart]="EatherreumChart.chart"
+                                            [dataLabels]="EatherreumChart.dataLabels" [stroke]="EatherreumChart.stroke"
+                                            [fill]="EatherreumChart.fill" [colors]="EatherreumChart.colors"
+                                            dir="ltr"></apx-chart>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div><!-- end -->
+
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <div class="dropdown" ngbDropdown>
+                                        <a class="text-reset arrow-none" href="javascript:void(0);"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            ngbDropdownToggle>
+                                            <span class="text-muted fs-18"><i
+                                                    class="mdi mdi-dots-horizontal"></i></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                            <a class="dropdown-item" href="javascript:void(0);">View Details</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Remove Watchlist</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/images/svg/crypto-icons/xmr.svg"
+                                        class="bg-light rounded-circle p-1 avatar-xs img-fluid" alt="">
+                                    <h6 class="ms-2 mb-0 fs-14">Monero</h6>
+                                </div>
+                                <div class="row align-items-end g-0">
+                                    <div class="col-6">
+                                        <h5 class="mb-1 mt-4">$226.55</h5>
+                                        <p class="text-danger fs-13 fw-medium mb-0">-1.92%<span
+                                                class="text-muted ms-2 fs-10">(XMR)</span></p>
+                                    </div><!-- end col -->
+                                    <div class="col-6">
+                                        <apx-chart [series]="BinanceChart.series" [chart]="BinanceChart.chart"
+                                            [dataLabels]="BinanceChart.dataLabels" [stroke]="BinanceChart.stroke"
+                                            [fill]="BinanceChart.fill" [colors]="BinanceChart.colors"
+                                            dir="ltr"></apx-chart>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div><!-- end -->
+
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <div class="dropdown" ngbDropdown>
+                                        <a class="text-reset arrow-none" href="javascript:void(0);"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            ngbDropdownToggle>
+                                            <span class="text-muted fs-18"><i
+                                                    class="mdi mdi-dots-horizontal"></i></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                            <a class="dropdown-item" href="javascript:void(0);">View Details</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Remove Watchlist</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/images/svg/crypto-icons/dash.svg"
+                                        class="bg-light rounded-circle p-1 avatar-xs img-fluid" alt="">
+                                    <h6 class="ms-2 mb-0 fs-14">Dash</h6>
+                                </div>
+                                <div class="row align-items-end g-0">
+                                    <div class="col-6">
+                                        <h5 class="mb-1 mt-4">$142.5</h5>
+                                        <p class="text-success fs-13 fw-medium mb-0">+16.38%<span
+                                                class="text-muted ms-2 fs-10">(DASH)</span></p>
+                                    </div><!-- end col -->
+                                    <div class="col-6">
+                                        <apx-chart [series]="DashChart.series" [chart]="DashChart.chart"
+                                            [dataLabels]="DashChart.dataLabels" [stroke]="DashChart.stroke"
+                                            [fill]="DashChart.fill" [colors]="DashChart.colors" dir="ltr"></apx-chart>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div><!-- end -->
+
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <div class="dropdown" ngbDropdown>
+                                        <a class="text-reset arrow-none" href="javascript:void(0);"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            ngbDropdownToggle>
+                                            <span class="text-muted fs-18"><i
+                                                    class="mdi mdi-dots-horizontal"></i></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                            <a class="dropdown-item" href="javascript:void(0);">View Details</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Remove Watchlist</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/images/svg/crypto-icons/mkr.svg"
+                                        class="bg-light rounded-circle p-1 avatar-xs img-fluid" alt="">
+                                    <h6 class="ms-2 mb-0 fs-14">Maker</h6>
+                                </div>
+                                <div class="row align-items-end g-0">
+                                    <div class="col-6">
+                                        <h5 class="mb-1 mt-4">$2,390.75</h5>
+                                        <p class="text-success fs-13 fw-medium mb-0">+0.36%<span
+                                                class="text-muted ms-2 fs-10">(MKR)</span></p>
+                                    </div><!-- end col -->
+                                    <div class="col-6">
+                                        <apx-chart [series]="TetherChart.series" [chart]="TetherChart.chart"
+                                            [dataLabels]="TetherChart.dataLabels" [stroke]="TetherChart.stroke"
+                                            [fill]="TetherChart.fill" [colors]="TetherChart.colors"></apx-chart>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div><!-- end -->
+
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <div class="dropdown" ngbDropdown>
+                                        <a class="text-reset arrow-none" href="javascript:void(0);"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            ngbDropdownToggle>
+                                            <span class="text-muted fs-18"><i
+                                                    class="mdi mdi-dots-horizontal"></i></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                            <a class="dropdown-item" href="javascript:void(0);">View Details</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Remove Watchlist</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/images/svg/crypto-icons/neo.svg"
+                                        class="bg-light rounded-circle p-1 avatar-xs img-fluid" alt="">
+                                    <h6 class="ms-2 mb-0 fs-14">Neo</h6>
+                                </div>
+                                <div class="row align-items-end g-0">
+                                    <div class="col-6">
+                                        <h5 class="mb-1 mt-4">$2,145.65</h5>
+                                        <p class="text-success fs-13 fw-medium mb-0">32.07%<span
+                                                class="text-muted ms-2 fs-10">(NEO)</span></p>
+                                    </div><!-- end col -->
+                                    <div class="col-6">
+                                        <apx-chart [series]="NeoChart.series" [chart]="NeoChart.chart"
+                                            [dataLabels]="NeoChart.dataLabels" [stroke]="NeoChart.stroke"
+                                            [fill]="NeoChart.fill" [colors]="NeoChart.colors" dir="ltr"></apx-chart>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div><!-- end -->
+                </div>
+            </swiper>
+
+        </div>
+
+        <div class="card" id="marketList">
+            <div class="card-header border-bottom-dashed d-flex align-items-center">
+                <h4 class="card-title mb-0 flex-grow-1">Market Status</h4>
+                <div class="flex-shrink-0">
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary btn-sm">Today</button>
+                        <button type="button" class="btn btn-outline-primary btn-sm">Overall</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive table-card">
+                    <table class="table align-middle table-nowrap" id="customerTable">
+                        <thead class="table-light text-muted">
+                            <tr>
+                                <th class="sort" sortable="currency_name" scope="col">Name</th>
+                                <th class="sort" sortable="quantity_value" scope="col">Quantity</th>
+                                <th class="sort" sortable="avg_price" scope="col">Avg. Price</th>
+                                <th class="sort" sortable="current_value" scope="col">Current Value</th>
+                                <th class="sort" sortable="returns" scope="col">Returns</th>
+                                <th class="sort" sortable="returns_per" scope="col">Returns %</th>
+                            </tr>
+                        </thead><!--end thead-->
+                        <tbody class="list form-check-all">
+                            <tr *ngFor="let data of WalletList$ | async">
+                                <td>
+                                    <div class="d-flex align-items-center fw-medium">
+                                        <img src="{{data.img}}" alt="" class="avatar-xxs me-2" />
+                                        <a href="javascript:void(0)" class="currency_name text-reset">{{data.coinName}}</a>
+                                    </div>
+                                </td>
+                                <td><ngb-highlight [result]="data.quantity" [term]="service.searchTerm"></ngb-highlight>
+                                </td>
+                                <td><ngb-highlight [result]="data.avgPrice" [term]="service.searchTerm"></ngb-highlight>
+                                </td>
+                                <td><ngb-highlight [result]="data.value" [term]="service.searchTerm"></ngb-highlight>
+                                </td>
+                                <td><ngb-highlight [result]="data.returns" [term]="service.searchTerm"></ngb-highlight>
+                                </td>
+                                <td class="returns_per">
+                                    <h6 class="text-{{data.percentageClass}} fs-13 mb-0"><i
+                                            class="{{data.icon}} align-middle me-1"></i>{{data.percentage}}</h6>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table><!--end table-->
+                </div>
+                <div class="row justify-content-md-between align-items-md-center mt-3">
+                    <div class="col col-sm-6">
+                        <div class="dataTables_info mb-2" id="tickets-table_info" role="status" aria-live="polite">
+                            Showing
+                            {{service.startIndex}} to
+                            {{service.endIndex}} of {{service.totalRecords}}
+                            entries
+                        </div>
+                    </div>
+                    <!-- Pagination -->
+                    <div class="col col-sm-6">
+                        <div class="text-sm-right float-sm-end listjs-pagination">
+                            <ngb-pagination [collectionSize]="(total$ | async)!" [(page)]="service.page"
+                                [pageSize]="service.pageSize">
+                            </ngb-pagination>
+                        </div>
+                    </div>
+                    <!-- End Pagination -->
+                </div>
+            </div>
+        </div><!--end card-->
+
+    </div><!--end col-->
+
+    <div class="col-xxl-3">
+        <div class="card overflow-hidden">
+            <div class="card-body bg-soft-primary">
+                <div class="d-flex">
+                    <div class="flex-grow-1">
+                        <h5 class="fs-13 mb-3">My Portfolio</h5>
+                        <h4>$61,91,967<small class="text-muted fs-14">.29</small></h4>
+                        <p class="text-muted mb-0">$25,10,974 <small class="badge badge-soft-success"><i
+                                    class="ri-arrow-right-up-line fs-13 align-bottom"></i>4.37%</small></p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <i class="mdi mdi-wallet-outline text-primary fs-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div><!--end card-->
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="flex-grow-1">
+                        <h5 class="fs-13 mb-3">Today's Profit</h5>
+                        <h4>$2,74,365<small class="text-muted fs-14">.84</small></h4>
+                        <p class="text-muted mb-0">$9,10,564 <small class="badge badge-soft-success"><i
+                                    class="ri-arrow-right-up-line fs-13 align-bottom"></i>1.25%</small></p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <i class="ri-hand-coin-line text-primary fs-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div><!--end card-->
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="flex-grow-1">
+                        <h5 class="fs-13 mb-3">Overall Profit</h5>
+                        <h4>$32,67,120<small class="text-muted fs-14">.42</small></h4>
+                        <p class="text-muted mb-0">$18,22,730 <small class="badge badge-soft-success"><i
+                                    class="ri-arrow-right-up-line fs-13 align-bottom"></i>8.34%</small></p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <i class="ri-line-chart-line text-primary fs-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div><!--end card-->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Recent Transaction</h5>
+            </div>
+            <div class="card-body">
+                <div class="d-flex mb-3">
+                    <div class="flex-shrink-0">
+                        <img src="assets/images/svg/crypto-icons/btc.svg" alt="" class="avatar-xxs" />
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <h6 class="mb-1">Bitcoin (BTC)</h6>
+                        <p class="text-muted mb-0">Today</p>
+                    </div>
+                    <div>
+                        <h6 class="text-danger mb-0">- $422.89</h6>
+                    </div>
+                </div>
+                <div class="d-flex mb-3">
+                    <div class="flex-shrink-0">
+                        <img src="assets/images/svg/crypto-icons/ltc.svg" alt="" class="avatar-xxs" />
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <h6 class="mb-1">Litecoin (LTC)</h6>
+                        <p class="text-muted mb-0">Yesterday</p>
+                    </div>
+                    <div>
+                        <h6 class="text-success mb-0">+ $784.20</h6>
+                    </div>
+                </div>
+                <div class="d-flex mb-3">
+                    <div class="flex-shrink-0">
+                        <img src="assets/images/svg/crypto-icons/xmr.svg" alt="" class="avatar-xxs" />
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <h6 class="mb-1">Monero (XMR)</h6>
+                        <p class="text-muted mb-0">01 Jan, 2022</p>
+                    </div>
+                    <div>
+                        <h6 class="text-danger mb-0">- $356.74</h6>
+                    </div>
+                </div>
+                <div class="d-flex mb-3">
+                    <div class="flex-shrink-0">
+                        <img src="assets/images/svg/crypto-icons/fil.svg" alt="" class="avatar-xxs" />
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <h6 class="mb-1">Filecoin (FIL)</h6>
+                        <p class="text-muted mb-0">30 Dec, 2021</p>
+                    </div>
+                    <div>
+                        <h6 class="text-success mb-0">+ $1,247.00</h6>
+                    </div>
+                </div>
+                <div class="d-flex mb-3">
+                    <div class="flex-shrink-0">
+                        <img src="assets/images/svg/crypto-icons/dot.svg" alt="" class="avatar-xxs" />
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <h6 class="mb-1">Polkadot (DOT)</h6>
+                        <p class="text-muted mb-0">27 Dec, 2021</p>
+                    </div>
+                    <div>
+                        <h6 class="text-success btn mb-0">+ $7,365.80</h6>
+                    </div>
+                </div>
+                <div>
+                    <a routerLink="/crypto/transactions" class="btn btn-soft-secondary w-100">View All Transactions <i
+                            class="ri-arrow-right-line align-bottom"></i></a>
+                </div>
+            </div>
+        </div><!--end card-->
+    </div><!--end col-->
+</div><!--end row-->

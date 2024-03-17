@@ -1,0 +1,77 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumbs title="Collections" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+<!-- End Breadcrumbs -->
+
+<div class="row g-4 mb-3 align-items-center justify-content-between">
+    <div class="col-sm-auto">
+        <div>
+            <h5 class="mb-0">Top Collections</h5>
+        </div>
+    </div>
+    <!--end col-->
+    <div class="col-sm-auto">
+        <div class="d-flex justify-content-sm-end gap-2">
+            <div class="search-box ms-2">
+                <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="service.searchTerm">
+                <i class="ri-search-line search-icon"></i>
+            </div>
+
+            <select class="form-control w-md" data-choices data-choices-search-false>
+                <option value="All">All</option>
+                <option value="Today" selected>Today</option>
+                <option value="Yesterday">Yesterday</option>
+                <option value="Last 7 Days">Last 7 Days</option>
+                <option value="Last 30 Days">Last 30 Days</option>
+                <option value="This Month">This Month</option>
+                <option value="Last Year">Last Year</option>
+            </select>
+        </div>
+    </div>
+    <!--end col-->
+</div>
+<!--end row-->
+
+<div class="row">
+    <div class="col-xl-3 col-md-4 col-sm-6" *ngFor="let data of collectionData$ | async">
+        <div class="card">
+            <div class="card-body">
+                <div class="row g-1 mb-3">
+                    <div class="col-6" *ngFor="let user of data.images">
+                        <img src="{{user.img}}" alt="" class="img-fluid rounded  mt-1" *ngFor="let user of user.image">
+                    </div>
+                    <!--end col-->
+                </div>
+                <!--end row-->
+                <a href="javascript:void(0);" class="float-end"> View All <i
+                        class="ri-arrow-right-line align-bottom"></i></a>
+                <h5 class="mb-0 fs-16"><a href="javascript:void(0);" class="text-reset">{{data.title}} <span
+                            class="badge badge-soft-success">{{data.count}}</span></a></h5>
+            </div>
+        </div>
+    </div>
+    <!--end col-->
+</div>
+<!--end row-->
+
+<div class="row g-0 text-center text-sm-start align-items-center mb-4">
+    <div class="col-sm-6">
+        <div>
+            <p class="mb-sm-0 text-muted">
+                Showing
+                {{service.startIndex}} to
+                {{service.endIndex}} of {{service.totalRecords}}
+                entries
+            </p>
+        </div>
+    </div>
+    <!-- end col -->
+    <div class="col-sm-6">
+        <!-- Pagination -->
+        <div class="text-sm-right float-sm-end listjs-pagination">
+            <ngb-pagination [collectionSize]="(total$ | async)!" [(page)]="service.page" [pageSize]="service.pageSize">
+            </ngb-pagination>
+        </div>
+        <!-- End Pagination -->
+    </div><!-- end col -->
+</div>
+<!--end row-->

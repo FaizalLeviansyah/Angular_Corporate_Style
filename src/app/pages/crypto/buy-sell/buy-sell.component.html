@@ -1,0 +1,400 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumbs title="Buy & Sell" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+<!-- End Breadcrumbs -->
+
+<div class="row">
+  <div class="col-xl-3 col-sm-6">
+      <div class="card card-animate">
+          <div class="card-body">
+              <div class="d-flex">
+                  <div class="flex-grow-1">
+                      <h6 class="text-muted mb-3">Total Buy</h6>
+                      <h4 class="mb-0">$<span [CountTo]="243" class="counter-value" [from]="0" [duration]="1"></span><small class="text-muted fs-13">.10k</small></h4>
+                  </div>
+                  <div class="flex-shrink-0 avatar-sm">
+                      <div class="avatar-title bg-soft-secondary text-danger fs-22 rounded">
+                          <i class="ri-shopping-bag-line"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div><!--end card-->
+  </div><!--end col-->
+  <div class="col-xl-3 col-sm-6">
+      <div class="card card-animate">
+          <div class="card-body">
+              <div class="d-flex">
+                  <div class="flex-grow-1">
+                      <h6 class="text-muted mb-3">Total Sell</h6>
+                      <h4 class="mb-0">$<span [CountTo]="658" class="counter-value" [from]="0" [duration]="1"></span><small class="text-muted fs-13">.00k</small></h4>
+                  </div>
+                  <div class="flex-shrink-0 avatar-sm">
+                      <div class="avatar-title bg-soft-success text-info fs-22 rounded">
+                          <i class="ri-funds-line"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div><!--end card-->
+  </div><!--end col-->
+  <div class="col-xl-3 col-sm-6">
+      <div class="card card-animate">
+          <div class="card-body">
+              <div class="d-flex">
+                  <div class="flex-grow-1">
+                      <h6 class="text-muted mb-3">Today's Buy</h6>
+                      <h4 class="mb-0">$<span [CountTo]="104" class="counter-value" [from]="0" [duration]="1"></span><small class="text-muted fs-13">.85k</small></h4>
+                  </div>
+                  <div class="flex-shrink-0 avatar-sm">
+                      <div class="avatar-title bg-soft-primary text-warning fs-22 rounded">
+                          <i class="ri-arrow-left-down-fill"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div><!--end card-->
+  </div><!--end col-->
+  <div class="col-xl-3 col-sm-6">
+      <div class="card card-animate">
+          <div class="card-body">
+              <div class="d-flex">
+                  <div class="flex-grow-1">
+                      <h6 class="text-muted mb-3">Today's Sell</h6>
+                      <h4 class="mb-0">$<span [CountTo]="87" class="counter-value" [from]="0" [duration]="1"></span><small class="text-muted fs-13">.35k</small></h4>
+                  </div>
+                  <div class="flex-shrink-0 avatar-sm">
+                      <div class="avatar-title bg-soft-info text-info fs-22 rounded">
+                          <i class="ri-arrow-right-up-fill"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div><!--end card-->
+  </div><!--end col-->
+</div><!--end row-->
+
+<div class="row">
+  <div class="col-xxl-9">
+      <div class="card card-height-100">
+          <div class="card-header border-0 align-items-center d-flex">
+              <h4 class="card-title mb-0 flex-grow-1">Market Graph</h4>
+              <div class="d-flex gap-1">
+                  <button type="button" class="btn btn-soft-secondary btn-sm">
+                      1H
+                  </button>
+                  <button type="button" class="btn btn-soft-secondary btn-sm">
+                      7D
+                  </button>
+                  <button type="button" class="btn btn-soft-secondary btn-sm">
+                      1M
+                  </button>
+                  <button type="button" class="btn btn-soft-secondary btn-sm">
+                      1Y
+                  </button>
+                  <button type="button" class="btn btn-soft-primary btn-sm">
+                      ALL
+                  </button>
+              </div>
+          </div><!-- end card header -->
+          <div class="card-body p-0">
+              <div class="bg-soft-light border-top-dashed border border-start-0 border-end-0 border-bottom-dashed py-3 px-4">
+                  <div class="row align-items-center">
+                      <div class="col-6">
+                          <div class="d-flex flex-wrap gap-4 align-items-center">
+                              <div>
+                                  <h3 class="fs-19">$46,959.<small class="fs-14 text-muted">00</small></h3>
+                                  <p class="text-muted text-uppercase fw-medium mb-0">Bitcoin (BTC) <small class="badge badge-soft-success"><i class="ri-arrow-right-up-line align-bottom"></i> 2.15%</small></p>
+                              </div>
+                          </div>
+                      </div><!-- end col -->
+                      <div class="col-6">
+                          <div class="d-flex">
+                              <div class="d-flex justify-content-end text-end flex-wrap gap-4 ms-auto">
+                                  <div class="pe-3">
+                                      <h6 class="mb-2 text-muted">High</h6>
+                                      <h5 class="text-success mb-0">$28,722.76</h5>
+                                  </div>
+                                  <div class="pe-3">
+                                      <h6 class="mb-2 text-muted">Low</h6>
+                                      <h5 class="text-danger mb-0">$68,789.63</h5>
+                                  </div>
+                                  <div>
+                                      <h6 class="mb-2 text-muted">Market Volume</h6>
+                                      <h5 class="text-danger mb-0">$888,411,910</h5>
+                                  </div>
+                              </div>
+                          </div>
+                      </div><!-- end col -->
+                  </div><!-- end row -->
+              </div>
+          </div><!-- end cardbody -->
+          <div class="card-body p-0 pb-3">
+              <apx-chart [series]="marketGraphChart.series" [chart]="marketGraphChart.chart" [plotOptions]="marketGraphChart.plotOptions"
+                        [title]="marketGraphChart.title" [xaxis]="marketGraphChart.xaxis" [yaxis]="marketGraphChart.yaxis" dir="ltr"></apx-chart>
+          </div><!-- end cardbody -->
+      </div><!-- end card -->
+  </div><!--end col-->
+  <div class="col-xxl-3">
+      <div class="card card-height-100">
+          <div class="card-header">
+            <ul ngbNav #pillsnav="ngbNav" [activeId]="1" class="nav nav-tabs-custom rounded card-header-tabs nav-justified border-bottom-0 mx-n3">
+              <li [ngbNavItem]="1">
+                  <a ngbNavLink class="nav-link">
+                      Buy
+                  </a>
+                  <ng-template ngbNavContent>
+                    <div class="p-3 bg-soft-warning">
+                      <div class="float-end ms-2">
+                          <h6 class="text-warning mb-0">USD Balance : <span class="text-dark">$12,426.07</span></h6>
+                      </div>
+                      <h6 class="mb-0 text-danger">Buy Coin</h6>
+                    </div>
+                    <div class="p-3">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label>Currency :</label>
+                                    <select class="form-select">
+                                        <option>BTC</option>
+                                        <option>ETH</option>
+                                        <option>LTC</option>
+                                    </select>
+                                </div>
+                            </div><!-- end col -->
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label>Payment Method :</label>
+                                    <select class="form-select">
+                                        <option>Wallet Balance</option>
+                                        <option>Credit / Debit Card</option>
+                                        <option>PayPal</option>
+                                        <option>Payoneer</option>
+                                    </select>
+                                </div>
+                            </div><!-- end col -->
+                        </div><!-- end row -->
+                        <div>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text">Amount</label>
+                                <input type="text" class="form-control" placeholder="0">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <label class="input-group-text">Price</label>
+                                <input type="text" class="form-control" placeholder="2.045585">
+                                <label class="input-group-text">$</label>
+                            </div>
+
+                            <div class="input-group mb-0">
+                                <label class="input-group-text">Total</label>
+                                <input type="text" class="form-control" placeholder="2700.16">
+                            </div>
+                        </div>
+                        <div class="mt-3 pt-2">
+                            <div class="d-flex mb-2">
+                                <div class="flex-grow-1">
+                                    <p class="fs-13 mb-0">Transaction Fees<span class="text-muted ms-1 fs-11">(0.05%)</span></p>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <h6 class="mb-0">$1.08</h6>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="flex-grow-1">
+                                    <p class="fs-13 mb-0">Minimum Received<span class="text-muted ms-1 fs-11">(2%)</span></p>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <h6 class="mb-0">$7.85</h6>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="flex-grow-1">
+                                    <p class="fs-13 mb-0">Estimated Rate</p>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <h6 class="mb-0">1 BTC ~ $46982.70</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3 pt-2">
+                            <button type="button" class="btn btn-primary w-100">Buy Coin</button>
+                        </div>
+                    </div>
+                  </ng-template>
+              </li>
+              <li [ngbNavItem]="2">
+                  <a ngbNavLink class="nav-link">
+                      Sell
+                  </a>
+                  <ng-template ngbNavContent>
+                    <div class="p-3 bg-soft-warning">
+                      <div class="float-end ms-2">
+                          <h6 class="text-warning mb-0">USD Balance : <span class="text-dark">$12,426.07</span></h6>
+                      </div>
+                      <h6 class="mb-0 text-danger">Sell Coin</h6>
+                    </div>
+                    <div class="p-3">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="currencySelect">Currency :</label>
+                                    <select class="form-select" id="currencySelect">
+                                        <option value="BTC" selected>BTC</option>
+                                        <option value="ETH">ETH</option>
+                                        <option value="EUR">EUR</option>
+                                        <option value="JPY">JPY</option>
+                                        <option value="LTC">LTC</option>
+                                    </select>
+                                </div>
+                            </div><!-- end col -->
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <div class="mb-3">
+                                        <label for="paymentMethod">Payment Method :</label>
+                                        <select class="form-select" id="paymentMethod">
+                                            <option>Wallet Balance</option>
+                                            <option>Credit / Debit Card</option>
+                                            <option>PayPal</option>
+                                            <option>Payoneer</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div><!-- end col -->
+                        </div><!-- end row -->
+                        <div>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text">Amount</label>
+                                <input type="text" class="form-control" placeholder="0">
+                            </div>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text">Price</label>
+                                <input type="text" class="form-control" placeholder="2.045585">
+                                <label class="input-group-text">$</label>
+                            </div>
+                            <div class="input-group mb-0">
+                                <label class="input-group-text">Total</label>
+                                <input type="text" class="form-control" placeholder="2700.16">
+                            </div>
+                        </div>
+                        <div class="mt-3 pt-2">
+                            <div class="d-flex mb-2">
+                                <div class="flex-grow-1">
+                                    <p class="fs-13 mb-0">Transaction Fees<span class="text-muted ms-1 fs-11">(0.05%)</span></p>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <h6 class="mb-0">$1.08</h6>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="flex-grow-1">
+                                    <p class="fs-13 mb-0">Minimum Received<span class="text-muted ms-1 fs-11">(2%)</span></p>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <h6 class="mb-0">$7.85</h6>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="flex-grow-1">
+                                    <p class="fs-13 mb-0">Estimated Rate</p>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <h6 class="mb-0">1 BTC ~ $46982.70</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3 pt-2">
+                            <button type="button" class="btn btn-danger w-100">Sell Coin</button>
+                        </div>
+                    </div>
+                  </ng-template>
+              </li>
+          </ul>
+          </div>
+          <div class="card-body p-0">
+              <div class="tab-content text-muted">
+                <div [ngbNavOutlet]="pillsnav"></div>
+              </div>
+          </div>
+      </div>
+  </div><!--end col-->
+</div><!--end row-->
+
+<div class="card" id="marketList">
+  <div class="card-header border-bottom-dashed">
+      <div class="row align-items-center">
+          <div class="col-3">
+              <h5 class="card-title mb-0">Markets</h5>
+          </div><!--end col-->
+          <div class="col-auto ms-auto">
+              <div class="d-flex gap-2">
+                  <button class="btn btn-soft-secondary"><i class="ri-equalizer-line align-bottom me-1"></i> Filters</button>
+              </div>
+          </div><!--end col-->
+      </div><!--end row-->
+  </div><!--end card-header-->
+  <div class="card-body p-0 border-bottom border-bottom-dashed">
+      <div class="search-box">
+          <input type="text"  name="searchTerm" class="form-control search border-0 py-3" placeholder="Search to currency..." [(ngModel)]="service.searchTerm">
+          <i class="ri-search-line search-icon"></i>
+      </div>
+  </div><!--end card-body-->
+  <div class="card-body">
+      <div class="table-responsive table-card">
+        <table class="table align-middle table-nowrap" id="customerTable">
+          <thead class="table-light text-muted">
+            <tr>
+                <th class="sort" buysellsortable="coinName" (buysellsort)="onSort($event)" scope="col">Currency
+                </th>
+                <th class="sort" buysellsortable="price" (buysellsort)="onSort($event)" scope="col">Price</th>
+                <th class="sort" buysellsortable="pairs" (buysellsort)="onSort($event)" scope="col">Pairs</th>
+                <th class="sort" buysellsortable="high" (buysellsort)="onSort($event)" scope="col">24 High</th>
+                <th class="sort" buysellsortable="low" (buysellsort)="onSort($event)" scope="col">24 Low</th>
+                <th class="sort" buysellsortable="marketVolume" (buysellsort)="onSort($event)" scope="col">
+                    Market Volume</th>
+                <th class="sort" buysellsortable="percentage" (buysellsort)="onSort($event)" scope="col">Volume
+                    %</th>
+                <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody class="list form-check-all">
+            <tr *ngFor="let data of buysellList$ | async">
+              <td>
+                <div class="d-flex align-items-center fw-medium">
+                    <img src="{{data.img}}" alt="" class="avatar-xxs me-2">
+                    <a href="javascript:void(0);" class="currency_name">{{data.coinName}}</a>
+                </div>
+              </td>
+              <td><ngb-highlight [result]="data.price" [term]="service.searchTerm"></ngb-highlight></td>
+              <td><ngb-highlight [result]="data.pairs" [term]="service.searchTerm"></ngb-highlight></td>
+              <td><ngb-highlight [result]="data.high" [term]="service.searchTerm"></ngb-highlight></td>
+              <td><ngb-highlight [result]="data.low" [term]="service.searchTerm"></ngb-highlight></td>
+              <td><ngb-highlight [result]="data.marketVolume" [term]="service.searchTerm"></ngb-highlight></td>
+              <td class="valume"><h6 class="text-{{data.iconClass}} fs-13 mb-0"><i class="mdi {{data.icon}} align-middle me-1"></i>{{data.percentage}}</h6></td>
+              <td>
+                <button class="btn btn-sm btn-soft-info">Trade Now</button>
+             </td>
+            </tr>
+          </tbody>
+        </table><!--end table-->
+      </div>
+      <div class="row justify-content-md-between align-items-md-center mt-3">
+        <div class="col col-sm-6">
+            <div class="dataTables_info mb-2" id="tickets-table_info" role="status" aria-live="polite">
+                Showing
+                {{service.startIndex}} to
+                {{service.endIndex}} of {{service.totalRecords}}
+                entries
+            </div>
+        </div>
+        <!-- Pagination -->
+        <div class="col col-sm-6">
+            <div class="text-sm-right float-sm-end listjs-pagination">
+              <ngb-pagination
+              [collectionSize]="(total$ | async)!" [(page)]="service.page" [pageSize]="service.pageSize">
+            </ngb-pagination>
+            </div>
+        </div>
+        <!-- End Pagination -->
+      </div>
+  </div><!--end card-body-->
+</div><!--end card-->

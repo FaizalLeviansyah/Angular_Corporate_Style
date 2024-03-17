@@ -1,0 +1,117 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumbs title="Creators" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+<!-- End Breadcrumbs -->
+
+<div class="row g-4 mb-3 justify-content-between">
+    <div class="col-sm-auto">
+        <div>
+            <a routerLink="/projects/create" class="btn btn-secondary"><i class="ri-add-line align-bottom me-1"></i> Add
+                New</a>
+        </div>
+    </div>
+    <div class="col-sm-auto">
+        <div class="d-flex justify-content-sm-end gap-2">
+            <div class="search-box ms-2">
+                <input type="text" class="form-control search" placeholder="Search..." [(ngModel)]="service.searchTerm">
+                <i class="ri-search-line search-icon"></i>
+            </div>
+
+            <select class="form-control w-md" data-choices data-choices-search-false>
+                <option value="All">All</option>
+                <option value="Today">Today</option>
+                <option value="Yesterday" selected>Yesterday</option>
+                <option value="Last 7 Days">Last 7 Days</option>
+                <option value="Last 30 Days">Last 30 Days</option>
+                <option value="This Month">This Month</option>
+                <option value="Last Year">Last Year</option>
+            </select>
+        </div>
+    </div>
+    <!--end col-->
+</div>
+<!--end row-->
+
+<div class="row">
+    <div class="col-xl-3 col-lg-4 col-md-6" *ngFor="let data of creatorsData">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="flex-shrink-0">
+                        <img src="{{data.img}}" alt="" class="avatar-sm object-cover rounded">
+                    </div>
+                    <div class="ms-3 flex-grow-1">
+                        <a routerLink="/pages/profile">
+                            <h5 class="mb-1">{{data.title}}</h5>
+                        </a>
+                        <p class="text-muted mb-0"><i class="mdi mdi-ethereum text-primary fs-14"></i> {{data.price}}
+                        </p>
+                    </div>
+                    <div>
+                        <div class="dropdown float-end" ngbDropdown>
+                            <button class="btn btn-ghost-primary btn-icon dropdown arrow-none d-block" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" ngbDropdownToggle>
+                                <i class="ri-more-fill align-middle fs-16"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                <li><a class="dropdown-item view-item-btn" href="javascript:void(0);">Share</a></li>
+                                <li><a class="dropdown-item edit-item-btn" href="javascript:void(0);"
+                                        data-bs-toggle="modal">Report</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end col-->
+</div>
+<!--end row-->
+
+<div class="row">
+    <div class="col-lg-12">
+        <h5 class="card-title mb-4 fw-semibold fs-16">Creators Grid Lists</h5>
+    </div>
+</div>
+
+<div class="row row-cols-xl-5 row-cols-lg-3 row-cols-md-2 row-cols-1">
+    <div class="col" *ngFor="let data of creatorsListData$ | async">
+        <div class="card">
+            <img src="{{data.cardImg}}" alt="" class="object-cover card-img-top" height="120">
+            <div class="card-body text-center">
+                <img src="{{data.img}}" alt=""
+                    class="avatar-md rounded-circle object-cover mt-n5 img-thumbnail border-light mx-auto d-block">
+                <a routerLink="/pages/profile">
+                    <h5 class="mt-2 mb-1">{{data.title}}</h5>
+                </a>
+                <p class="text-muted mb-2">{{data.products}} Products</p>
+                <p class="text-muted">{{data.content}}</p>
+                <button class="btn w-100"
+                    [ngClass]="{'btn-primary': data.isFollowBtn === true, 'btn-soft-primary': data.isFollowBtn !== true}">{{data.followbtn}}</button>
+            </div>
+        </div>
+    </div>
+    <!--end col-->
+</div>
+<!--end row-->
+
+<div class="row g-0 text-center text-sm-start align-items-center mb-4">
+    <div class="col-sm-6">
+        <div>
+            <p class="mb-sm-0 text-muted">
+                Showing
+                {{service.startIndex}} to
+                {{service.endIndex}} of {{service.totalRecords}}
+                entries
+            </p>
+        </div>
+    </div>
+    <!-- end col -->
+    <div class="col-sm-6">
+        <!-- Pagination -->
+        <div class="text-sm-right float-sm-end listjs-pagination">
+            <ngb-pagination [collectionSize]="(total$ | async)!" [(page)]="service.page"
+                [pageSize]="service.pageSize"></ngb-pagination>
+        </div>
+        <!-- End Pagination -->
+    </div><!-- end col -->
+</div>

@@ -1,0 +1,451 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumbs title="Sweet Alerts" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+<!-- End Breadcrumbs -->
+
+<div class="row">
+  <div class="col-lg-12">
+      <div class="card">
+          <div class="card-header">
+              <h4 class="card-title mb-0">Examples</h4>
+          </div><!-- end card header -->
+
+          <div class="card-body">
+              <p class="text-muted">Here are the various types of beautiful, responsive, customizable, and accessible sweet alerts.</p>
+
+              <div class="table-responsive">
+                  <table class="table table-nowrap align-middle justify-content-center mb-0">
+                      <thead>
+                          <tr>
+                              <th scope="col" style="width: 50%;">
+                                  Sweet Alert Type
+                              </th>
+                              <th scope="col" class="text-center">
+                                  Sweet Alert Examples
+                              </th>
+                          </tr>
+                      </thead>
+                      <tbody>
+
+                          <tr>
+                              <td>
+                                  A Basic Message
+                              </td>
+                              <td class="text-center">
+                                  <button type="button" class="btn btn-primary btn-sm" id="sa-basic" (click)="basicMessage()">Click me</button>
+                              </td>
+                          </tr>
+
+                          <tr>
+                              <td>
+                                  A Title with a Text Under
+                              </td>
+                              <td class="text-center">
+                                  <button type="button" class="btn btn-primary btn-sm" id="sa-title" (click)="titleText()">Click me</button>
+                              </td>
+                          </tr>
+
+                          <tr>
+                              <td>
+                                  A success message!
+                              </td>
+                              <td class="text-center">
+                                  <button type="button" class="btn btn-primary btn-sm" id="sa-success" (click)="successmsg()">Click me</button>
+                              </td>
+                          </tr>
+
+                          <tr>
+                              <td>
+                                  A modal with a title, an error icon, a text, and a footer
+                              </td>
+                              <td class="text-center">
+                                  <button type="button" class="btn btn-primary btn-sm" id="sa-error" (click)="modelTitle()">Click me</button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  A modal window with a long content inside
+                              </td>
+                              <td class="text-center">
+                                  <button type="button" class="btn btn-primary btn-sm" id="sa-longcontent" (click)="customImg()">Click me</button>
+                              </td>
+                          </tr>
+
+                          <tr>
+                              <td>
+                                  A warning message, with a function attached to the "Confirm"-button...
+                              </td>
+                              <td class="text-center">
+                                  <button type="button" class="btn btn-primary btn-sm" id="sa-warning" (click)="confirm()">Click me</button>
+                              </td>
+                          </tr>
+
+                          <tr>
+                              <td>
+                                  By passing a parameter, you can execute something else for "Cancel".
+                              </td>
+                              <td class="text-center">
+                                  <button type="button" class="btn btn-primary btn-sm" id="sa-params" (click)="cancel()">Click me</button>
+                              </td>
+                          </tr>
+
+                          <tr>
+                              <td>
+                                  A message with custom Image Header
+                              </td>
+                              <td class="text-center">
+                                  <button type="button" class="btn btn-primary btn-sm" id="sa-image" (click)="imageHeader()">Click me</button>
+                              </td>
+                          </tr>
+
+                          <tr>
+                              <td>
+                                  A message with auto close timer
+                              </td>
+                              <td class="text-center">
+                                  <button type="button" class="btn btn-primary btn-sm" id="sa-close" (click)="timer()">Click me</button>
+                              </td>
+                          </tr>
+
+                          <tr>
+                              <td>
+                                  Custom HTML description and buttons
+                              </td>
+                              <td class="text-center">
+                                  <button type="button" class="btn btn-primary btn-sm" id="custom-html-alert" (click)="custom()">Click me</button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  A dialog with three buttons
+                              </td>
+                              <td class="text-center">
+                                  <button type="button" class="btn btn-primary btn-sm" id="sa-dialog-three-btn" (click)="threeBtn()">Click me</button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  A custom positioned dialog
+                              </td>
+                              <td class="text-center">
+                                  <button type="button" class="btn btn-primary btn-sm" id="sa-position" (click)="position()">Click me</button>
+                              </td>
+                          </tr>
+
+                          <tr>
+                              <td>
+                                  A message with custom width, padding and background
+                              </td>
+                              <td class="text-center">
+                                  <button type="button" class="btn btn-primary btn-sm" id="custom-padding-width-alert" (click)="customBackground()">Click me</button>
+                              </td>
+                          </tr>
+
+                          <tr>
+                              <td>
+                                  Ajax request example
+                              </td>
+                              <td class="text-center">
+                                  <button type="button" class="btn btn-primary btn-sm" id="ajax-alert" (click)="ajax()">Click me</button>
+                              </td>
+                          </tr>
+
+                      </tbody>
+                  </table>
+                  <!-- end table -->
+              </div>
+              <!-- end table responsive -->
+          </div><!-- end card-body -->
+      </div><!-- end card -->
+  </div>
+  <!-- end col -->
+</div>
+<!-- end row -->
+
+<div class="row mt-2">
+  <div class="col-lg-12">
+
+      <div class="justify-content-between d-flex align-items-center mb-3">
+          <h5 class="mb-0 pb-1 text-decoration-underline">Custom Sweetalert Example</h5>
+      </div>
+      <div class="row">
+
+          <div class="col-xl-4 col-md-6">
+              <div class="card text-center border">
+                  <div class="card-body p-4 pb-0">
+
+                      <h5 class="mb-4">Success Message</h5>
+                      <p class="text-muted">Here is an example of a sweet alert with a success message.</p>
+                      <div>
+                          <button type="button" class="btn btn-primary" id="custom-sa-success" (click)="successModel(successContent)">Click me</button>
+                      </div>
+
+                      <div class="row justify-content-center mt-2">
+                          <div class="col-lg-10">
+                              <div>
+                                  <img src="assets/images/sweetalert2/success-message.png" alt="Mac Image" class="img-fluid">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- end card body -->
+              </div>
+              <!-- end card -->
+          </div>
+          <!-- end col -->
+
+          <div class="col-xl-4 col-md-6">
+              <div class="card text-center border">
+                  <div class="card-body p-4 pb-0">
+                      <h5 class="mb-4">Error Message</h5>
+                      <p class="text-muted">Here is an example of a sweet alert with a error message.</p>
+                      <div>
+                          <button type="button" class="btn btn-primary" id="custom-sa-error" (click)="errorModel(errorContent)">Click me</button>
+                      </div>
+
+                      <div class="row justify-content-center mt-2">
+                          <div class="col-lg-10">
+                              <div>
+                                  <img src="assets/images/sweetalert2/error-message.png" alt="Mac Image" class="img-fluid">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- end card body -->
+              </div>
+              <!-- end card -->
+          </div>
+          <!-- end col -->
+          <div class="col-xl-4 col-md-6">
+              <div class="card text-center border">
+                  <div class="card-body p-4 pb-0">
+                      <h5 class="mb-4">Warning Message</h5>
+                      <p class="text-muted">Here is an example of a sweet alert with a warning message.</p>
+                      <div>
+                          <button type="button" class="btn btn-primary" id="custom-sa-warning" (click)="warningModel(warningContent)">Click me</button>
+                      </div>
+
+                      <div class="row justify-content-center mt-2">
+                          <div class="col-lg-10">
+                              <div>
+                                  <img src="assets/images/sweetalert2/warning-message.png" alt="Mac Image" class="img-fluid">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- end card body -->
+              </div>
+              <!-- end card -->
+          </div>
+          <!-- end col -->
+
+          <div class="col-xl-4 col-md-6">
+              <div class="card text-center border">
+                  <div class="card-body p-4 pb-0">
+                      <h5 class="mb-4">Join Our Community</h5>
+                      <p class="text-muted">Here is an example of a sweet alert with a community registration field.</p>
+
+                      <div>
+                          <button type="button" class="btn btn-primary" id="custom-sa-community" (click)="JoinModel(joinContent)">Click me</button>
+                      </div>
+
+                      <div class="row justify-content-center mt-2">
+                          <div class="col-lg-10">
+                              <div>
+                                  <img src="assets/images/sweetalert2/join-community.png" alt="Mac Image" class="img-fluid">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- end card body -->
+              </div>
+              <!-- end card -->
+          </div>
+          <!-- end col -->
+
+          <div class="col-xl-4 col-md-6">
+              <div class="card text-center border">
+                  <div class="card-body p-4 pb-0">
+                      <h5 class="mb-4">Email Verification</h5>
+                      <p class="text-muted">Here is an example of a sweet alert with a email verification field.</p>
+                      <div>
+                          <button type="button" class="btn btn-primary" id="custom-sa-email-verify" (click)="EmailVerification(emailContent)">Click me</button>
+                      </div>
+
+                      <div class="row justify-content-center mt-2">
+                          <div class="col-lg-10">
+                              <div>
+                                  <img src="assets/images/sweetalert2/email-verify.png" alt="Mac Image" class="img-fluid">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- end card body -->
+              </div>
+              <!-- end card -->
+          </div>
+          <!-- end col -->
+
+          <div class="col-xl-4 col-md-6">
+              <div class="card text-center border">
+                  <div class="card-body p-4 pb-0">
+                      <h5 class="mb-4">Notification Message</h5>
+                      <p class="text-muted">Here is an example of a sweet alert with a custom notification message.</p>
+
+                      <div>
+                          <button type="button" class="btn btn-primary" id="custom-sa-notification" (click)="notificationMsg(notificationContent)">Click me</button>
+                      </div>
+
+                      <div class="row justify-content-center mt-2">
+                          <div class="col-lg-10">
+                              <div>
+                                  <img src="assets/images/sweetalert2/notification-message.png" alt="Mac Image" class="img-fluid">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- end card body -->
+              </div>
+              <!-- end card -->
+          </div>
+          <!-- end col -->
+      </div>
+      <!-- end row -->
+  </div>
+  <!-- end col -->
+</div>
+<!-- end row -->
+
+<!-- Success Modal -->
+<ng-template #successContent let-modal>
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="btn-close" (click)="modal.dismiss('Cross click')"></button>
+      </div>
+      <div class="modal-body text-center">
+        <lord-icon src="https://cdn.lordicon.com/lupuorrc.json" trigger="loop" colors="primary:#0ab39c,secondary:#405189" style="width:120px;height:120px"></lord-icon>
+        <div class="mt-4 pt-2 fs-15">
+            <h4>Well done !</h4>
+            <p class="text-muted mx-4 mb-0">Aww yeah, you successfully read this important message.</p>
+        </div>
+        <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+            <button type="button" class="swal2-cancel btn btn-primary w-xs mb-1" aria-label="" style="display: inline-block;" (click)="modal.close('Close click')">Back</button>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+</ng-template>
+
+<!-- Error Modal -->
+<ng-template #errorContent let-modal>
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="btn-close" (click)="modal.dismiss('Cross click')"></button>
+      </div>
+      <div class="modal-body text-center">
+        <lord-icon src="https://cdn.lordicon.com/tdrtiskw.json" trigger="loop" colors="primary:#f06548,secondary:#f7b84b" style="width:120px;height:120px"></lord-icon>
+        <div class="mt-4 pt-2 fs-15 ">
+            <h4>Oops...! Something went Wrong !</h4>
+            <p class="text-muted mx-4 mb-0">Your email Address is invalid</p>
+        </div>
+        <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+            <button type="button" class="swal2-cancel btn btn-primary w-xs mb-1" aria-label="" style="display: inline-block;" (click)="modal.close('Close click')">Dismiss</button>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+</ng-template>
+
+<!-- removeItemModal -->
+<ng-template #warningContent let-modal>
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="btn-close" (click)="modal.dismiss('Cross click')"></button>
+      </div>
+      <div class="modal-body">
+          <div class="mt-2 text-center">
+              <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px"></lord-icon>
+              <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
+                  <h4>Are you Sure ?</h4>
+                  <p class="text-muted mx-4 mb-0">Are you Sure You want to Remove this Product ?</p>
+              </div>
+          </div>
+          <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+              <button type="button" class="btn w-sm btn-light" data-bs-dismiss="modal" (click)="modal.close('Close click')">Close</button>
+              <button type="button" class="btn w-sm btn-danger " id="delete-product" (click)="modal.close('Close click')">Yes, Delete It!</button>
+          </div>
+      </div>
+    </div><!-- /.modal-content -->
+</ng-template>
+
+<!-- Join Modal -->
+<ng-template #joinContent let-modal>
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="btn-close" (click)="modal.dismiss('Cross click')"></button>
+      </div>
+      <div class="text-center">
+        <img class="swal2-image" src="assets/images/logo-sm.png" alt="" style="height: 40px;">
+        <h2 class="swal2-title" id="swal2-title" style="display: block;">Join Our Community</h2>
+        <div class="swal2-html-container" id="swal2-html-container" style="display: block;"><div class="mt-3 text-start"><label for="input-email" class="form-label fs-13">Email</label><input type="email" class="form-control" id="input-email" placeholder="Enter Email Address"></div></div>
+        <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+            <button type="button" class="swal2-confirm btn btn-primary w-xs mb-2" aria-label="" style="display: inline-block;" (click)="modal.close('Close click')">Register <i class="ri-arrow-right-line ms-1 align-bottom"></i></button>
+        </div>
+        <div class="swal2-footer" style="display: flex;">
+            <p class="fs-13 text-muted">Already have an account ? 
+                <a href="javascript:void(0);" class="fw-semibold text-decoration-underline"> Signin </a> 
+            </p>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+</ng-template>
+
+<!-- Email Modal -->
+<ng-template #emailContent let-modal>
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="btn-close" (click)="modal.dismiss('Cross click')"></button>
+      </div>
+      <div class="text-center">
+        <div class="mt-3">
+            <div class="avatar-lg mx-auto">
+                <div class="avatar-title bg-light text-success display-5 rounded-circle">
+                    <i class="ri-mail-send-fill"></i>
+                </div>
+            </div>
+            <div class="mt-4 pt-2 fs-15">
+                <h4 class="fs-20 fw-semibold">Verify Your Email</h4>
+                <p class="text-muted mb-0 mt-3 fs-13">We have sent you verification email <span class="fw-medium text-dark">example@abc.com</span>, <br> Please check it.</p>
+            </div>
+        </div>
+        <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+            <button type="button" class="swal2-confirm btn btn-primary mb-1" aria-label="" (click)="modal.dismiss('Cross click')">Verify Email</button>
+        </div>
+        <div class="swal2-footer">
+            <p class="fs-14 text-muted">Didn't receive an email ? 
+                <a href="javascript:void(0);" class="fw-semibold text-decoration-underline">Resend</a>
+            </p>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+</ng-template>
+
+<!-- Notification Modal -->
+<ng-template #notificationContent let-modal>
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="btn-close" (click)="modal.dismiss('Cross click')"></button>
+      </div>
+      <div class="modal-body">
+          <div class="mt-2 text-center">
+            <div class="avatar-lg mx-auto">
+                <img src="assets/images/users/avatar-2.jpg" class="rounded-circle img-thumbnail" alt="thumbnail">
+            </div>
+            <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
+                <h4>Welcome Mike Mayer</h4>
+                <p class="text-muted mx-4 mb-0">You have 2 Notifications</p>
+            </div>
+          </div>
+          <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+            <button type="button" class="swal2-confirm btn btn-primary mb-1" (click)="modal.close('Close click')">Show Me <i class="ri-arrow-right-line ms-1 align-bottom"></i></button>
+          </div>
+      </div>
+    </div><!-- /.modal-content -->
+</ng-template>

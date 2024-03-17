@@ -1,0 +1,94 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumbs title="Ranking" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+<!-- End Breadcrumbs -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card" id="contactList">
+            <div class="card-header">
+                <div class="d-flex align-items center">
+                    <h5 class="card-title mb-0 flex-grow-1">The top NFTs ranking on Velzon</h5>
+                    <p class="text-muted mb-0">Updated: 28 April, 2022 08:05:00</p>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row justify-content-between g-3">
+                    <div class="col-xxl-3 col-sm-6">
+                        <div class="search-box">
+                            <input type="text" class="form-control search" placeholder="Search for ..." [(ngModel)]="service.searchTerm">
+                            <i class="ri-search-line search-icon"></i>
+                        </div>
+                    </div>
+                    <!--end col-->
+                    <div class="col-xxl-2 col-sm-4">
+                        <div>
+                            <select class="form-control" data-choices data-choices-search-false name="choices-single-default" id="idStatus">
+                                <option value="All Time" selected>All Time</option>
+                                <option value="1 Day">1 Day</option>
+                                <option value="7 Days">7 Days</option>
+                                <option value="15 Days">15 Days</option>
+                                <option value="1 Month">1 Month</option>
+                                <option value="6 Month">6 Month</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--end col-->
+                </div><!--end row-->
+            </div>
+            <div class="card-body">
+                <div class="table-responsive table-card">
+                    <table class="table align-middle table-nowrap table-hover" id="customerTable">
+                        <thead class="table-light text-muted">
+                            <tr>
+                                <th class="sort" sortable="ranking" (sort)="onSort($event)" style="width: 98px;">Ranking</th>
+                                <th class="sort" sortable="collection" (sort)="onSort($event)">Collection</th>
+                                <th class="sort" sortable="volume_price" (sort)="onSort($event)">Volume (USD)</th>
+                                <th class="sort">24h%</th>
+                                <th class="sort">7d%</th>
+                                <th class="sort" sortable="item" (sort)="onSort($event)">Item</th>
+                                <th class="sort">Floor Price</th>
+                            </tr>
+                            <!--end tr-->
+                        </thead>
+                        <tbody class="list form-check-all">
+                            <tr *ngFor="let data of rankingData$ | async">
+                                <td class="ranking text-info fw-semibold">
+                                    {{data.ranking}}
+                                </td>
+                                <td class="collection">
+                                    <div class="d-flex align-items-center">
+                                        <img src="{{data.img}}" alt="" class="avatar-xs rounded-circle object-cover me-2"> <a routerLink="/marletplace/item-details" class="link-dark">{{data.collection}}</a>
+                                    </div>
+                                </td>
+                                <td class="volume_price">{{data.volume_price}}</td>
+                                <td>
+                                    <h6 class="text-success mb-1 24h" [ngClass]=" {'text-danger': data.hours < 0}">{{data.hours}} ETH</h6>
+                                </td>
+                                <td>
+                                    <h6 class="text-success mb-1 7d" [ngClass]=" {'text-danger': data.day < 0}">{{data.day}} ETH</h6>
+                                </td>
+                                <td class="item">{{data.item}}</td>
+                                <td class="floor-price">{{data.floor_price}}</td>
+                            </tr>
+                            <!--end tr-->
+                        </tbody>
+                    </table>
+                    <!--end table-->
+                   
+                </div>
+                <div class="d-flex justify-content-end mt-3">
+                    <!-- Pagination -->
+                    <div class="text-sm-right float-sm-end listjs-pagination">
+                        <ngb-pagination [collectionSize]="(total$ | async)!" [(page)]="service.page" [pageSize]="service.pageSize"></ngb-pagination>
+                    </div>
+                    <!-- End Pagination -->
+                </div>
+            </div>
+        </div>
+        <div id="elmLoader">
+            <div class="spinner-border text-primary avatar-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div><!--end col-->
+</div><!--end row-->

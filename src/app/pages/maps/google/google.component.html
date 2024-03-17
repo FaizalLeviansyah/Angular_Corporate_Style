@@ -1,0 +1,60 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumbs title="Google Maps" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+<!-- End Breadcrumbs -->
+
+<div class="row">
+  <div class="col-lg-6">
+      <div class="card">
+          <div class="card-header">
+              <h4 class="card-title mb-0">Markers</h4>
+          </div><!-- end card header -->
+
+          <div class="card-body">
+            <agm-map [latitude]="latitude" [longitude]="longitude" style="height: 300px">
+            </agm-map>
+          </div><!-- end card-body -->
+      </div><!-- end card -->
+  </div>
+  <!-- end col -->
+
+  <div class="col-lg-6">
+      <div class="card">
+          <div class="card-header">
+              <h4 class="card-title mb-0">Overlays</h4>
+          </div><!-- end card header -->
+
+          <div class="card-body">
+            <agm-map [latitude]="latitude" [longitude]="longitude" style="height: 300px" (mapClick)="placeMarker($event)">
+              <agm-marker *ngFor="let marker of markers" [latitude]="marker.latitude" [longitude]="marker.longitude">
+                <agm-info-window [disableAutoPan]="false" #infoWindow>
+                  <strong>InfoWindow content</strong>
+                </agm-info-window>
+              </agm-marker>
+            </agm-map>
+          </div><!-- end card-body -->
+      </div><!-- end card -->
+  </div>
+  <!-- end col -->
+</div>
+<!-- end row -->
+
+<div class="row">
+
+  <div class="col-lg-6">
+      <div class="card">
+          <div class="card-header">
+              <h4 class="card-title mb-0">Location</h4>
+          </div><!-- end card header -->
+
+          <div class="card-body">
+            <agm-map [latitude]="latitude" [longitude]="longitude" style="height: 300px">
+              <agm-circle [latitude]="latitude" [longitude]="longitude" [radius]="9000" [fillColor]="'red'"
+                [circleDraggable]="true" [editable]="true">
+              </agm-circle>
+            </agm-map>
+          </div><!-- end card-body -->
+      </div><!-- end card -->
+  </div>
+  <!-- end col -->
+</div>
+<!-- end row -->

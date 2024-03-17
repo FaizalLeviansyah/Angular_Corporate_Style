@@ -1,0 +1,46 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumbs title="Wallet Connect" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+<!-- End Breadcrumbs -->
+
+<div class="row justify-content-center">
+    <div class="col-xl-5">
+        <div class="text-center mb-4">
+            <h4>Your current wallet</h4>
+            <p class="text-muted fs-13">WalletConnect is a convenient open source tool that enables a mobile wallet to easily connect to decentralized web applications, and interact with them from your phone.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center mb-4">
+    <div class="col-lg-3">
+        <div class="card text-center">
+            <div class="card-body py-5 px-4">
+                <img src="assets/images/nft/wallet/metamask.png" alt="" height="55" class="mb-3 pb-2">
+                <h5>Metamask</h5>
+                <p class="text-muted pb-1">MetaMask is a software cryptocurrency wallet used to interact with the Ethereum blockchain.</p>
+                <a href="javascript:void(0);" class="btn btn-secondary">Change Wallet</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-xl-5">
+        <div class="text-center mb-4">
+            <h4>Connect with one of our other available wallet providers.</h4>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-3" *ngFor="let data of walletData">
+        <div class="card text-center">
+            <div class="card-body py-5 px-4">
+                <img src="{{data.img}}" alt="" height="55" class="mb-3 pb-2">
+                <h5>{{data.title}}</h5>
+                <p class="text-muted pb-1">{{data.textContent}}</p>
+                <a href="javascript:void(0);" class="btn btn-soft-primary">Connect Wallet</a>
+            </div>
+        </div>
+    </div>
+</div>

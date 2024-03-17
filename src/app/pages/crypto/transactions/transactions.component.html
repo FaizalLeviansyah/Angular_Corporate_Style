@@ -1,0 +1,254 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumbs title="Transactions" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+<!-- End Breadcrumbs -->
+
+<div class="row">
+    <div class="col-xxl-3 col-md-6">
+        <div class="card card-animate">
+            <div class="card-body">
+                <div class="d-flex mb-3">
+                    <div class="flex-grow-1">
+                        <lord-icon src="https://cdn.lordicon.com/fhtaantg.json" trigger="loop"
+                            colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px">
+                        </lord-icon>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <a href="javascript:void(0);" class="badge badge-soft-warning badge-border">BTC</a>
+                        <a href="javascript:void(0);" class="badge badge-soft-info badge-border">ETH</a>
+                        <a href="javascript:void(0);" class="badge badge-soft-primary badge-border">USD</a>
+                        <a href="javascript:void(0);" class="badge badge-soft-danger badge-border">EUR</a>
+                    </div>
+                </div>
+                <h4 class="mb-2">$<span [CountTo]="74858" class="counter-value" [from]="0" [duration]="1"></span><small
+                        class="text-muted fs-13">.68k</small></h4>
+                <h6 class="text-muted mb-0">Available Balance (USD)</h6>
+            </div>
+        </div><!--end card-->
+    </div><!--end col-->
+    <div class="col-xxl-3 col-md-6">
+        <div class="card card-animate">
+            <div class="card-body">
+                <div class="d-flex mb-3">
+                    <div class="flex-grow-1">
+                        <lord-icon src="https://cdn.lordicon.com/qhviklyi.json" trigger="loop"
+                            colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px"></lord-icon>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <a href="javascript:void(0);" class="badge badge-soft-warning badge-border">BTC</a>
+                        <a href="javascript:void(0);" class="badge badge-soft-info badge-border">ETH</a>
+                        <a href="javascript:void(0);" class="badge badge-soft-primary badge-border">USD</a>
+                        <a href="javascript:void(0);" class="badge badge-soft-danger badge-border">EUR</a>
+                    </div>
+                </div>
+                <h4 class="mb-2">$<span [CountTo]="74361" class="counter-value" [from]="0" [duration]="1"></span><small
+                        class="text-muted fs-13">.34k</small></h4>
+                <h6 class="text-muted mb-0">Send (Previous Month)</h6>
+            </div>
+        </div><!--end card-->
+    </div><!--end col-->
+    <div class="col-xxl-3 col-md-6">
+        <div class="card card-animate">
+            <div class="card-body">
+                <div class="d-flex mb-3">
+                    <div class="flex-grow-1">
+                        <lord-icon src="https://cdn.lordicon.com/yeallgsa.json" trigger="loop"
+                            colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px">
+                        </lord-icon>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <a href="javascript:void(0);" class="badge badge-soft-warning badge-border">BTC</a>
+                        <a href="javascript:void(0);" class="badge badge-soft-info badge-border">ETH</a>
+                        <a href="javascript:void(0);" class="badge badge-soft-primary badge-border">USD</a>
+                        <a href="javascript:void(0);" class="badge badge-soft-danger badge-border">EUR</a>
+                    </div>
+                </div>
+                <h4 class="mb-2">$<span [CountTo]="97685" class="counter-value" [from]="0" [duration]="1"></span><small
+                        class="text-muted fs-13">.22k</small></h4>
+                <h6 class="text-muted mb-0">Receive (Previous Month)</h6>
+            </div>
+        </div><!--end card-->
+    </div><!--end col-->
+    <div class="col-xxl-3 col-md-6">
+        <swiper [config]="config">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card card-animate overflow-hidden">
+                        <div class="card-body bg-soft-warning">
+                            <div class="d-flex mb-3">
+                                <div class="flex-grow-1">
+                                    <lord-icon src="https://cdn.lordicon.com/vaeagfzc.json" trigger="loop"
+                                        colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px">
+                                    </lord-icon>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <a href="javascript:void(0);" class="fw-medium">Bitcoin (BTC)</a>
+                                </div>
+                            </div>
+                            <h4 class="mb-2">$245<small class="text-muted fs-13">.65k</small></h4>
+                            <h6 class="text-muted mb-0">Send - Receive (Previous Month)</h6>
+                        </div>
+                    </div><!--end card-->
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card-animate overflow-hidden">
+                        <div class="card-body bg-soft-warning">
+                            <div class="d-flex mb-3">
+                                <div class="flex-grow-1">
+                                    <lord-icon src="https://cdn.lordicon.com/vaeagfzc.json" trigger="loop"
+                                        colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px">
+                                    </lord-icon>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <a href="javascript:void(0);" class="fw-medium">Ethereum (ETH)</a>
+                                </div>
+                            </div>
+                            <h4 class="mb-2">$24<small class="text-muted fs-13">.74k</small></h4>
+                            <h6 class="text-muted mb-0">Send - Receive (Previous Month)</h6>
+                        </div>
+                    </div><!--end card-->
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card-animate overflow-hidden">
+                        <div class="card-body bg-soft-warning">
+                            <div class="d-flex mb-3">
+                                <div class="flex-grow-1">
+                                    <lord-icon src="https://cdn.lordicon.com/vaeagfzc.json" trigger="loop"
+                                        colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px">
+                                    </lord-icon>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <a href="javascript:void(0);" class="fw-medium">Monero (XMR)</a>
+                                </div>
+                            </div>
+                            <h4 class="mb-2">$124<small class="text-muted fs-13">.36k</small></h4>
+                            <h6 class="text-muted mb-0">Send - Receive (Previous Month)</h6>
+                        </div>
+                    </div><!--end card-->
+                </div>
+            </div>
+        </swiper>
+    </div><!--end col-->
+</div><!--end row-->
+
+<div class="row align-items-center mb-4 g-3">
+    <div class="col-sm-3">
+        <div class="d-flex align-items-center gap-2">
+            <span class="text-muted flex-shrink-0">Sort by: </span>
+            <div class="w-md">
+                <select class="form-control mb-0" data-choices data-choices-search-false name="choices-single-default"
+                    id="choices-single-default" [(ngModel)]="service.currency">
+                    <option value="All" selected>All</option>
+                    <option value="USD">USD</option>
+                    <option value="ETH">ETH</option>
+                    <option value="BTC">BTC</option>
+                    <option value="EUR">EUR</option>
+                    <option value="JPY">JPY</option>
+                </select>
+            </div>
+        </div>
+    </div><!--end col-->
+    <div class="col-sm-auto ms-auto">
+        <div class="d-flex gap-2">
+            <a href="javascript:void(0);" (click)="setType('Deposit')" data-bs-toggle="modal"
+                class="btn btn-success">Deposite</a>
+            <a href="javascript:void(0);" (click)="setType('Withdraw')" data-bs-toggle="modal"
+                class="btn btn-secondary">Withdraw</a>
+        </div>
+    </div><!--end col-->
+</div><!--end row-->
+
+<div class="card" id="contactList">
+    <div class="card-header">
+        <div class="row align-items-center g-3">
+            <div class="col-md-3">
+                <h5 class="card-title mb-0">All Transactions</h5>
+            </div><!--end col-->
+            <div class="col-md-auto ms-auto">
+                <div class="d-flex gap-2">
+                    <div class="search-box">
+                        <input type="text" name="searchTerm" class="form-control"
+                            placeholder="Search for transactions..." [(ngModel)]="service.searchTerm">
+                        <i class="ri-search-line search-icon"></i>
+                    </div>
+                    <button class="btn btn-soft-primary"><i class="ri-equalizer-line align-bottom mx-1"></i> Filters</button>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+    </div><!--end card-header-->
+    <div class="card-body">
+        <div class="table-responsive table-card">
+            <table class="table align-middle table-nowrap" id="customerTable">
+                <thead class="table-light text-muted">
+                    <tr>
+                        <th class="sort" style="width: 60px;"></th>
+                        <th class="sort" sortable1="time" (sort1)="onSort($event)">Timestamp</th>
+                        <th class="sort" sortable1="currency" (sort1)="onSort($event)">Currency</th>
+                        <th class="sort" sortable1="from" (sort1)="onSort($event)">Form</th>
+                        <th class="sort" sortable1="to" (sort1)="onSort($event)">To</th>
+                        <th class="sort" sortable1="details" (sort1)="onSort($event)">Details</th>
+                        <th class="sort" sortable1="id" (sort1)="onSort($event)">Transaction ID</th>
+                        <th class="sort" sortable1="type" (sort1)="onSort($event)">Type</th>
+                        <th class="sort" sortable1="amount" (sort1)="onSort($event)">Amount</th>
+                        <th class="sort" sortable1="status">Status</th>
+                    </tr><!--end tr-->
+                </thead>
+                <tbody class="list form-check-all">
+                    <tr *ngFor="let data of TransactionList$ | async">
+                        <td>
+                            <div class="avatar-xs">
+                                <div
+                                    class="avatar-title bg-soft-{{data.bg_color}} text-{{data.bg_color}} rounded-circle fs-16">
+                                    <i class="{{data.icon}}"></i>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="date">{{data.date}} <small class="text-muted">{{data.time}}</small></td>
+                        <td class="currency_name">
+                            <div class="d-flex align-items-center">
+                                <img src="{{data.image}}" alt="" class="avatar-xxs me-2">
+                                {{data.currency}}
+                            </div>
+                        </td>
+                        <td><ngb-highlight [result]="data.from" [term]="service.searchTerm"></ngb-highlight></td>
+                        <td><ngb-highlight [result]="data.to" [term]="service.searchTerm"></ngb-highlight></td>
+                        <td><ngb-highlight [result]="data.details" [term]="service.searchTerm"></ngb-highlight></td>
+                        <td><ngb-highlight [result]="data.id" [term]="service.searchTerm"></ngb-highlight></td>
+                        <td><ngb-highlight [result]="data.type" [term]="service.searchTerm"></ngb-highlight></td>
+                        <td>
+                            <h6 class="text-{{data.bg_color}} mb-1 amount">{{data.amount}}</h6>
+                            <p class="text-muted mb-0">{{data.amount1}}</p>
+                        </td>
+                        <td class="status">
+                            <span class="badge badge-soft-{{data.status_color}} fs-11"><i
+                                    class="ri-checkbox-circle-line align-bottom"></i> {{data.status}}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table><!--end table-->
+        </div>
+        <div class="row justify-content-md-between align-items-md-center mt-2">
+            <div class="col col-sm-6">
+                <div class="dataTables_info mb-2" id="tickets-table_info" role="status" aria-live="polite">
+                    Showing
+                    {{service.startIndex}} to
+                    {{service.endIndex}} of {{service.totalRecords}}
+                    entries
+                </div>
+            </div>
+            <!-- Pagination -->
+            <div class="col col-sm-6">
+                <div class="text-sm-right float-sm-end listjs-pagination">
+                    <ngb-pagination [collectionSize]="(total$ | async)!" [(page)]="service.page"
+                        [pageSize]="service.pageSize">
+                    </ngb-pagination>
+                </div>
+            </div>
+            <!-- End Pagination -->
+        </div>
+        <div id="elmLoader">
+            <div class="spinner-border text-primary avatar-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div><!--end card-body-->
+</div><!--end card-->
